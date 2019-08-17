@@ -1,0 +1,31 @@
+{
+    "author": "__MSG_extensionAuthor__",
+    "background":
+    {
+        "scripts":
+        [
+        	"Scripts/browser-polyfill.min.js",
+        	"DomainActions.js"
+        ]
+    },
+    "default_locale": "en_US",
+    "description": "__MSG_extensionDescription__",
+    "icons":
+    {
+        "48": "Icons/Icon_48.png",
+        "96": "Icons/Icon_96.png"
+    },
+    "manifest_version": 2,
+    "name": "__MSG_extensionName__",
+    "options_ui":
+    {
+        "page": "Scripts/OptionsPage.html"
+    },
+    "permissions": [
+        "contextMenus",
+        "notifications",
+        "storage",
+        "tabs"
+    ],
+    "version": "1.0.0"
+}

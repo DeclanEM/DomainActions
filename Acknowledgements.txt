@@ -1,0 +1,12 @@
+New Window, Refresh and Close icons used from:
+
+70 Free All Purpose Line Icons by Paolo Ertreo
+https://dribbble.com/shots/2906801-70-Free-All-Purpose-Line-Icons
+
+WebExtension Polyfill
+https://github.com/mozilla/webextension-polyfill
+
+Translations provided by:
+
+en_uk: Declan Easton-Mew
+en_us: Declan Easton-Mew

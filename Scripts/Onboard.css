@@ -1,0 +1,129 @@
+html * {
+    font-family: Arial !important;
+}
+
+body {
+    margin: 0;
+    background-color: #eff0f1;
+}
+
+header {
+    background-color: firebrick;
+    padding: 1px;
+    text-align: center;
+}
+
+h1,
+h2 {
+    color: white;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.textArea {
+    background-color: #eff0f1;
+    padding: 20px 10px 58px 10px;
+}
+
+h3,
+h4 {
+    color: black;
+}
+
+h3 {
+    text-align: center;
+    line-height: 2;
+    font-weight: normal;
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+h4 {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+li {
+    font-style: italic;
+    font-size: 16px;
+}
+
+p {
+    font-size: 16px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #e7e7e7;
+    padding: 1px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    height: auto;
+    width: 100vw;
+}
+
+a.button {
+    -moz-appearance: button;
+    -webkit-appearance: button;
+    -webkit-transition-duration: 0.4s;
+    appearance: button;
+    background-color: white;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    margin: 4px 2px;
+    padding: 12px 34px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+a.chromeButton {
+    background-color: white;
+    color: black;
+    border: 3px solid dodgerblue;
+}
+
+a.chromeButton:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+
+a.firefoxButton {
+    background-color: white;
+    color: black;
+    border: 3px solid darkorange;
+}
+
+a.firefoxButton:hover {
+    background-color: darkorange;
+    color: white;
+}
+
+a.githubButton {
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+}
+
+a.githubButton:hover {
+    background-color: black;
+    color: white;
+}

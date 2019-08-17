@@ -1,0 +1,105 @@
+{
+    //Manifest strings.
+
+    "extensionAuthor":
+    {
+        "message": "Declan Easton-Mew",
+        "description": "The extension's author, intended for display in the browser's user interface."
+    },
+
+    "extensionDescription":
+    {
+        "message": "Provides domain specific actions for browser tabs.",
+        "description": "A short description of the extension, intended for display in the browser's user interface."
+    },
+
+    "extensionName":
+    {
+        "message": "DomainActions",
+        "description": "Name of the extension. This is used to identify the extension in the browser's user interface and on sites like addons.mozilla.org."
+    },
+
+    //Background strings.
+    //Menu item strings.
+    "menuItem_NewWindow":
+    {
+        "message": "New Window",
+        "description": "Used to indicate the tabs will be moved to a new window."
+    },
+
+    "menuItem_Refresh":
+    {
+        "message": "Refresh",
+        "description": "Used to indicate the tabs will be refreshed."
+    },
+
+    "menuItem_Close":
+    {
+        "message": "Close",
+        "description": "Used to indicate the tabs will be closed."
+    },
+
+    //Warning strings.
+    "warning_NoDomain":
+    {
+        "message": "DomainActions was unable to find a domain in the selected tab!.",
+        "description": "A warning that DomainActions couldn't detect a domain."
+    },
+
+    "warning_NoTabs":
+    {
+        "message": "DomainActions found zero applicable tabs.",
+        "description": "A warning that DomainActions had no tabs to act on."
+    },
+
+    //Notification strings.
+    "notification_UpdateText":
+    {
+        "message": "DomainActions was just updated!\nClick here for details.",
+        "description": "Informs the user DomainActions was updated. NOTE: \n is used to insert a Line Break."
+    },
+
+    "notification_InstallText":
+    {
+        "message": "DomainActions was just installed!\nClick here for some helpful tips.",
+        "description": "Informs the user DomainActions was installed. NOTE: \n is used to insert a Line Break."
+    },
+
+
+    //Options strings.
+    "options_CurrentWindow":
+    {
+        "message": "Current Window",
+        "description": "Name of the Current Window setting."
+    },
+
+    "options_CurrentWindowDescription":
+    {
+        "message": "Only select tabs from the current window.",
+        "description": "Describes what Current Window does."
+    },
+
+    "options_ExceptActive":
+    {
+        "message": "Except Active",
+        "description": "Name of the Except Active setting."
+    },
+
+    "options_ExceptActiveDescription":
+    {
+        "message": "Ignore the active tab if it is in the selected domain.",
+        "description": "Describes what Except Active does."
+    },
+
+    "options_BypassCache":
+    {
+        "message": "Bypass Cache",
+        "description": "Name of the Bypass Cache setting."
+    },
+
+    "options_BypassCacheDescription":
+    {
+        "message": "Reloading tabs will bypass the cache.",
+        "description": "Describes what Bypass Cache does."
+    }
+}
