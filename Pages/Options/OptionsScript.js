@@ -8,13 +8,18 @@ let exceptActiveElement = null;
 let exceptActiveOld = null;
 
 function PerformSetup() {
-    document.getElementById("CurrentWindowTitle").innerText = browser.i18n.getMessage("options_CurrentWindow");
-    document.getElementById("CurrentWindowDescription").innerText = browser.i18n.getMessage("options_CurrentWindowDescription");
-    document.getElementById("ExceptActiveTitle").innerText = browser.i18n.getMessage("options_ExceptActive");
-    document.getElementById("ExceptActiveDescription").innerText = browser.i18n.getMessage("options_ExceptActiveDescription");
-    document.getElementById("BypassCacheTitle").innerText = browser.i18n.getMessage("options_BypassCache");
-    document.getElementById("BypassCacheDescription").innerText = browser.i18n.getMessage("options_BypassCacheDescription");
 
+    function InjectLanguage()
+    {
+        document.getElementById("CurrentWindowTitle").innerText = browser.i18n.getMessage("options_CurrentWindow");
+        document.getElementById("CurrentWindowDescription").innerText = browser.i18n.getMessage("options_CurrentWindowDescription");
+        document.getElementById("ExceptActiveTitle").innerText = browser.i18n.getMessage("options_ExceptActive");
+        document.getElementById("ExceptActiveDescription").innerText = browser.i18n.getMessage("options_ExceptActiveDescription");
+        document.getElementById("BypassCacheTitle").innerText = browser.i18n.getMessage("options_BypassCache");
+        document.getElementById("BypassCacheDescription").innerText = browser.i18n.getMessage("options_BypassCacheDescription");
+    }
+
+    InjectLanguage();
     currentWindowElement = document.getElementById("CurrentWindowCheckbox");
     bypassCacheElement = document.getElementById("ExceptActiveCheckbox");
     exceptActiveElement = document.getElementById("BypassCacheCheckbox");
