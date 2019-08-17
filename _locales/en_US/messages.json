@@ -101,5 +101,102 @@
     {
         "message": "Reloading tabs will bypass the cache.",
         "description": "Describes what Bypass Cache does."
+    },
+
+    //Onboard strings.
+    "onboard_TabTitle":
+    {
+        "message": "DomainActions New Install",
+        "description": "Tab title for the Onboard page."
+    },
+
+    "onboard_InstallThanks":
+    {
+        "message": "Thanks for installing!",
+        "description": "Thank the user for installing."
+    },
+
+    "onboard_ExplainerOne":
+    {
+        "message": "DomainActions is designed to make it really easy to manage lots of tabs from various websites all with a few simple options.",
+        "description": "Explain the extension in greater detail. NOTE: Use the <br /> tag to inject a line break if required."
+    },
+
+    "onboard_ExplainerTwo":
+    {
+        "message": "Everything the extension does will be applied to ALL the tabs you have open on a certain website, not just the one you click on.",
+        "description": "Explain the extension in greater detail (second line)."
+    },
+
+    "onboard_ExplainerThree":
+    {
+        "message": "DomainActions is always one click away, just right click on any tab and find the DomainActions menu at the bottom of the list. From the menu you'll have several actions to choose from:",
+        "description": "Explain how to use the extension."
+    },
+
+    "onboard_NewWindowExplain":
+    {
+        "message": "Move all the tabs in your selected domain to a new window, leaving the others where they are.",
+        "description": "Explain what New Window does."
+    },
+
+    "onboard_refreshTitleExplain":
+    {
+        "message": "Refresh all the tabs in your selected domain.",
+        "description": "Explain what Refresh does."
+    },
+
+    "onboard_closeTitleExplain":
+    {
+        "message": "Close all the tabs in your selected domain.",
+        "description": "Explain what Close does."
+    },
+
+    "onboard_OptionsHeader":
+    {
+        "message": "In addition DomainActions has several options you can configure to suit your needs:",
+        "description": "Introduce the configurable options."
+    },
+
+    "onboard_CurrentWindowExplain":
+    {
+        "message": "Disabling this option allows DomainActions to act on tabs in every open window, not just the ones in your current window.",
+        "description": "Explain what having Current Window enabled does."
+    },
+
+    "onboard_ExceptActiveExplain":
+    {
+        "message": "Enabling this option makes DomainActions ignore the currently active tab if it's part of the selected domain.",
+        "description": "Explain what having Except Active enabled does."
+    },
+
+    "onboard_BypassCacheExplain":
+    {
+        "message": "Enabling this option forces every reloaded tab to bypass the browser cache.",
+        "description": "Explain what having Bypass Cache enabled does."
+    },
+
+    "onboard_EnabledByDefault":
+    {
+        "message": "(Enabled by default)",
+        "description": "This option is on by default. NOTE: Include brackets or language-specific equivalent."
+    },
+
+    "onboard_DisabledByDefault":
+    {
+        "message": "(Disabled by default)",
+        "description": "This option is off by default. NOTE: Include brackets or language-specific equivalent."
+    },
+
+    "onboard_FirefoxStore":
+    {
+        "message": "Firefox Store",
+        "description": "Name of the Firefox Store."
+    },
+
+    "onboard_Github":
+    {
+        "message": "Github",
+        "description": "Name of Github."
     }
 }

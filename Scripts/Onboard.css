@@ -95,17 +95,6 @@ a.button {
     transition-duration: 0.4s;
 }
 
-a.chromeButton {
-    background-color: white;
-    color: black;
-    border: 3px solid dodgerblue;
-}
-
-a.chromeButton:hover {
-    background-color: dodgerblue;
-    color: white;
-}
-
 a.firefoxButton {
     background-color: white;
     color: black;
