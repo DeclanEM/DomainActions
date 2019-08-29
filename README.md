@@ -6,6 +6,8 @@ DomainActions is always one click away, just right click on any tab and find the
         <ul style="list-style-type: circle;">
             <li>New Window</li>
             <p>Move all the tabs in your selected domain to a new window, leaving the others where they are.</p>
+    		<li>Group</li>
+			<p>Shift all tabs in your selected domain into a single group.</p>
             <li>Refresh</li>
             <p>Refresh all the tabs in your selected domain.</p>
             <li>Close</li>

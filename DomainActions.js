@@ -1,11 +1,18 @@
 "use strict";
 
+let settings;
 let extensionName = browser.i18n.getMessage("extensionName");
 let warning_NoTabs = browser.i18n.getMessage("warning_NoTabs");
 
 async function GetSettings() {
-    let value = await browser.storage.local.get(["currentWindow", "bypassCache", "exceptActive"]);
-    return { "currentWindow": value.currentWindow, "bypassCache": value.bypassCache, "exceptActive": value.exceptActive };
+    let value = await browser.storage.local.get(["currentWindow", "exceptActive", "groupLocation", "bypassCache"]);
+    //Defines settings as either a set value from storage or a default value.
+    return {
+        "currentWindow": ((value.currentWindow === undefined) ? true : value.currentWindow),
+        "exceptActive": ((value.exceptActive === undefined) ? false : value.exceptActive),
+        "groupLocation": ((value.groupLocation === undefined) ? "First" : value.groupLocation),
+        "bypassCache": ((value.bypassCache === undefined) ? false : value.bypassCache)
+    };
 }
 
 function CreateMenuItems() {
@@ -17,13 +24,29 @@ function CreateMenuItems() {
 
     browser.contextMenus.create({
         id: "DomainActionsNewWindow",
+        icons: {
+            "16": "Icons/Icon_NewWindow.svg"
+        },
         parentId: "DomainActionsMenuItem",
         contexts: ["page"],
         title: browser.i18n.getMessage("menuItem_NewWindow")
     });
 
     browser.contextMenus.create({
+        id: "DomainActionsGroupTabs",
+        icons: {
+            "16": "Icons/Icon_GroupTabs.svg"
+        },
+        parentId: "DomainActionsMenuItem",
+        contexts: ["page"],
+        title: browser.i18n.getMessage("menuItem_GroupTabs")
+    });
+
+    browser.contextMenus.create({
         id: "DomainActionsRefreshTabs",
+        icons: {
+            "16": "Icons/Icon_Refresh.svg"
+        },
         parentId: "DomainActionsMenuItem",
         contexts: ["page"],
         title: browser.i18n.getMessage("menuItem_Refresh")
@@ -31,6 +54,9 @@ function CreateMenuItems() {
 
     browser.contextMenus.create({
         id: "DomainActionsCloseTabs",
+        icons: {
+            "16": "Icons/Icon_Close.svg"
+        },
         parentId: "DomainActionsMenuItem",
         contexts: ["page"],
         title: browser.i18n.getMessage("menuItem_Close")
@@ -56,6 +82,9 @@ async function OnClickedListener(info, tab) {
         switch (info.menuItemId) {
             case "DomainActionsNewWindow":
                 querying.then(MoveToNewWindow);
+                break;
+            case "DomainActionsGroupTabs":
+                querying.then(GroupTabs);
                 break;
             case "DomainActionsRefreshTabs":
                 querying.then(RefreshTabs);
@@ -86,6 +115,37 @@ function MoveToNewWindow(tabs) {
     newWindow.then((windowInfo) => {
         browser.tabs.move(tabIds, { windowId: windowInfo.id, index: -1 });
     });
+}
+
+function GroupTabs(tabs) {
+    if (tabs.length < 1) {
+        console.warn(warning_NoTabs);
+        return;
+    }
+    let tabIds = tabs.map(tabInfo => tabInfo.id);
+
+    switch (settings.groupLocation)
+    {
+        case "Start":
+            //TO-DO: Implement fix for Pinned Tabs.
+            browser.tabs.move(tabIds, { index: 0 });
+            break;
+        case "First":
+            let baseTabId = tabIds.shift();
+            if (tabIds.length < 1) {
+                console.warn(warning_NoTabs);
+                return;
+            }
+            let baseTab = browser.tabs.get(baseTabId);
+            baseTab.then(function(result)
+            {
+                browser.tabs.move(tabIds, { index: result.index });
+            });
+            break;
+        case "End":
+            browser.tabs.move(tabIds, { index: -1 });
+            break;
+    }
 }
 
 function RefreshTabs(tabs) {
@@ -139,7 +199,6 @@ function NotificationClickHandler(id, index) {
     }
 }
 
-let settings = { "currentWindow": true, "bypassCache": false, "exceptActive": false };
 CreateMenuItems();
 
 browser.contextMenus.onClicked.addListener(OnClickedListener);

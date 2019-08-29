@@ -27,6 +27,12 @@
         "description": "Used to indicate the tabs will be moved to a new window."
     },
 
+    "menuItem_GroupTabs":
+    {
+        "message": "Group",
+        "description": "Used to indicate the tabs will be grouped together."
+    },
+
     "menuItem_Refresh":
     {
         "message": "Refresh",
@@ -91,6 +97,36 @@
         "description": "Describes what Except Active does."
     },
 
+    "options_GroupLocation":
+    {
+        "message": "Group Location",
+        "description": "Name of the Group Location setting."
+    },
+
+    "options_GroupLocationDescription":
+    {
+        "message": "Determines where Group will move tabs. First moves tabs to first occurence in the domain, Start and End are relative to the entire window.",
+        "description": "Describes what the Group Location options do."
+    },
+
+    "options_GroupFirst":
+    {
+        "message": " First",
+        "description": "Describes the first occurence of a domain in the tabs. NOTE: Including a space before the word is optional but recommended for layout purposes."
+    },
+
+    "options_GroupStart":
+    {
+        "message": " Start",
+        "description": "Describes the first position in the tabs. NOTE: Including a space before the word is optional but recommended for layout purposes."
+    },
+
+    "options_GroupEnd":
+    {
+        "message": " End",
+        "description": "Describes the last position in the tabs. NOTE: Including a space before the word is optional but recommended for layout purposes."
+    },
+
     "options_BypassCache":
     {
         "message": "Bypass Cache",
@@ -140,13 +176,19 @@
         "description": "Explain what New Window does."
     },
 
-    "onboard_refreshTitleExplain":
+    "onboard_GroupTabsExplain":
+    {
+        "message": "Shift all tabs in your selected domain into a single group.",
+        "description": "Explain what Group does."
+    },
+
+    "onboard_RefreshExplain":
     {
         "message": "Refresh all the tabs in your selected domain.",
         "description": "Explain what Refresh does."
     },
 
-    "onboard_closeTitleExplain":
+    "onboard_CloseExplain":
     {
         "message": "Close all the tabs in your selected domain.",
         "description": "Explain what Close does."
@@ -168,6 +210,12 @@
     {
         "message": "Enabling this option makes DomainActions ignore the currently active tab if it's part of the selected domain.",
         "description": "Explain what having Except Active enabled does."
+    },
+
+    "onboard_GroupLocationExplain":
+    {
+        "message": "DomainActions will shift tabs to the Start, End or First occurence of the domain, depending on this option.",
+        "description": "Explain what having Start, First or End enabled do."
     },
 
     "onboard_BypassCacheExplain":

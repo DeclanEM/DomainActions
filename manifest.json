@@ -2,9 +2,10 @@
     "author": "__MSG_extensionAuthor__",
     "background":
     {
-        "scripts": [
-            "Scripts/browser-polyfill.min.js",
-            "DomainActions.js"
+        "scripts":
+        [
+            "Scripts/browser-polyfill.js",
+            "Background/DomainActions.js"
         ]
     },
     "default_locale": "en_US",
@@ -26,5 +27,5 @@
         "storage",
         "tabs"
     ],
-    "version": "1.0.0"
+    "version": "1.1.0"
 }
