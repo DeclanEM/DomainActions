@@ -10,6 +10,8 @@ function InjectLanguage()
     document.getElementById("explainerThree").innerText = browser.i18n.getMessage("onboard_ExplainerThree");
     document.getElementById("newWindowTitle").innerText = browser.i18n.getMessage("menuItem_NewWindow");
     document.getElementById("newWindowExplain").innerText = browser.i18n.getMessage("onboard_NewWindowExplain");
+    document.getElementById("groupTabsTitle").innerText = browser.i18n.getMessage("menuItem_GroupTabs");
+    document.getElementById("groupTabsExplain").innerText = browser.i18n.getMessage("onboard_GroupTabsExplain");
     document.getElementById("refreshTitle").innerText = browser.i18n.getMessage("menuItem_Refresh");
     document.getElementById("refreshExplain").innerText = browser.i18n.getMessage("onboard_RefreshExplain");
     document.getElementById("closeTitle").innerText = browser.i18n.getMessage("menuItem_Close");
@@ -19,6 +21,8 @@ function InjectLanguage()
 	document.getElementById("currentWindowExplain").innerText = browser.i18n.getMessage("onboard_CurrentWindowExplain");
     document.getElementById("exceptActiveTitle").innerText = `${browser.i18n.getMessage("options_ExceptActive")} ${browser.i18n.getMessage("onboard_DisabledByDefault")}`;
 	document.getElementById("exceptActiveExplain").innerText = browser.i18n.getMessage("onboard_ExceptActiveExplain");
+    document.getElementById("groupLocationTitle").innerText = browser.i18n.getMessage("options_groupLocation");
+    document.getElementById("groupLocationExplain").innerText = browser.i18n.getMessage("onboard_groupLocationExplain");
     document.getElementById("bypassCacheTitle").innerText = `${browser.i18n.getMessage("options_BypassCache")} ${browser.i18n.getMessage("onboard_DisabledByDefault")}`;
     document.getElementById("bypassCacheExplain").innerText = browser.i18n.getMessage("onboard_BypassCacheExplain");
     document.getElementById("firefoxStore").innerText = browser.i18n.getMessage("onboard_FirefoxStore");

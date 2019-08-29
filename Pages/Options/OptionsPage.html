@@ -7,15 +7,22 @@
 
 <body>
     <form name="settingsForm">
+        <br />
         <b id="CurrentWindowTitle"></b> <input type="checkbox" id="CurrentWindowCheckbox" />
         <p id="CurrentWindowDescription"></p>
         <br />
         <b id="ExceptActiveTitle"></b> <input type="checkbox" id="ExceptActiveCheckbox" />
         <p id="ExceptActiveDescription"></p>
         <br />
+        <b id="GroupLocationTitle"></b>
+        <input type="radio" name="GroupLocation" id="GroupFirstRadio" /><label for="GroupFirstRadio"></label>
+        <input type="radio" name="GroupLocation" id="GroupStartRadio" /><label for="GroupStartRadio"></label>
+        <input type="radio" name="GroupLocation" id="GroupEndRadio" /><label for="GroupEndRadio"></label>
+        <br />
+        <p id="GroupLocationDescription"></p>
+        <br />
         <b id="BypassCacheTitle"></b> <input type="checkbox" id="BypassCacheCheckbox" />
         <p id="BypassCacheDescription"></p>
-        <br />
     </form>
     <script src="OptionsScript.js"></script>
 </body>
